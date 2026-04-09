@@ -89,6 +89,7 @@ async function runSeed() {
 
   try {
     await client.query('BEGIN');
+    await client.query('SELECT pg_advisory_xact_lock($1)', [5001001]);
     await client.query(
       'TRUNCATE TABLE order_items, orders, products, users RESTART IDENTITY CASCADE'
     );
