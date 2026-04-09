@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>MiniShop Admin Dashboard</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body data-page="admin-dashboard">
+  <main class="shell">
+    <section class="panel">
+      <div class="row-between">
+        <div>
+          <p class="eyebrow">Admin</p>
+          <h1>Catalog Control</h1>
+        </div>
+        <a class="button button-secondary" href="./index.html">Storefront</a>
+      </div>
+      <div id="admin-products" class="grid"></div>
+      <p id="admin-message" class="message"></p>
+    </section>
+  </main>
+  <script src="./js/api.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 </html>

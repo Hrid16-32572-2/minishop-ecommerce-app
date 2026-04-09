@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart</title>
+  <title>MiniShop Cart</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body data-page="cart">
+  <main class="shell">
+    <section class="panel">
+      <h1>Your Cart</h1>
+      <div id="cart-items"></div>
+      <button id="checkout-button" class="button">Checkout</button>
+      <p id="cart-message" class="message"></p>
+    </section>
+  </main>
+  <script src="./js/api.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 </html>

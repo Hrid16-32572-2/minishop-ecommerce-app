@@ -4,7 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MiniShop</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body data-page="home">
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">MiniShop MVP</p>
+      <h1>Browse the active catalog and build a quick cart.</h1>
+      <p class="lede">This storefront talks directly to the MiniShop API.</p>
+      <div class="actions">
+        <a class="button" href="./cart.html">View Cart</a>
+        <a class="button button-secondary" href="./admin-login.html">Admin Login</a>
+      </div>
+    </section>
+    <section>
+      <h2>Products</h2>
+      <div id="product-list" class="grid"></div>
+    </section>
+  </main>
+  <script src="./js/api.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>

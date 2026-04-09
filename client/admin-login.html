@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
+  <title>MiniShop Admin Login</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body data-page="admin-login">
+  <main class="shell narrow">
+    <section class="panel">
+      <h1>Admin Login</h1>
+      <form id="admin-login-form" class="stack">
+        <label>
+          Email
+          <input type="email" name="email" value="admin@minishop.com" required>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" value="admin123" required>
+        </label>
+        <button class="button" type="submit">Sign In</button>
+      </form>
+      <p id="admin-login-message" class="message"></p>
+    </section>
+  </main>
+  <script src="./js/api.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 </html>

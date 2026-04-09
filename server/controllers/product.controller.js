@@ -48,7 +48,36 @@ async function getProductById(req, res, next) {
   }
 }
 
+async function softDeleteProduct(req, res, next) {
+  const productId = parseId(req.params.id);
+
+  if (!productId) {
+    res.sendEnvelope(400, false, null, 'INVALID_INPUT');
+    return;
+  }
+
+  try {
+    const result = await pool.query(
+      `UPDATE products
+       SET is_active = false
+       WHERE id = $1
+       RETURNING id, name, description, price, stock_quantity, image_url, is_active`,
+      [productId]
+    );
+
+    if (result.rowCount === 0) {
+      res.sendEnvelope(404, false, null, 'NOT_FOUND');
+      return;
+    }
+
+    res.sendEnvelope(200, true, result.rows[0], null);
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   getProductById,
-  listProducts
+  listProducts,
+  softDeleteProduct
 };
