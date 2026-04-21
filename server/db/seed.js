@@ -8,39 +8,39 @@ const schemaPath = path.resolve(__dirname, 'schema.sql');
 
 const products = [
   {
-    name: 'Starter Tee',
-    description: 'Soft cotton t-shirt for everyday wear.',
-    price: '19.99',
+    name: 'Premium Leather Bag',
+    description: 'Full-grain leather crossbody bag with reinforced stitching.',
+    price: '129.99',
     stock_quantity: 10,
-    image_url: 'https://example.com/images/starter-tee.jpg'
+    image_url: 'https://example.com/images/premium-leather-bag.jpg'
   },
   {
-    name: 'Canvas Tote',
-    description: 'Durable tote bag with reinforced handles.',
-    price: '14.50',
+    name: 'Minimalist Wall Clock',
+    description: 'Silent quartz wall clock with matte aluminum frame.',
+    price: '49.50',
     stock_quantity: 8,
-    image_url: 'https://example.com/images/canvas-tote.jpg'
+    image_url: 'https://example.com/images/minimalist-wall-clock.jpg'
   },
   {
-    name: 'Classic Mug',
-    description: 'Ceramic mug for coffee, tea, and more.',
-    price: '11.00',
+    name: 'Ergonomic Office Chair',
+    description: 'Breathable mesh chair with adjustable lumbar support.',
+    price: '239.00',
     stock_quantity: 15,
-    image_url: 'https://example.com/images/classic-mug.jpg'
+    image_url: 'https://example.com/images/ergonomic-office-chair.jpg'
   },
   {
-    name: 'Notebook Set',
-    description: 'Three-pack of lined notebooks.',
-    price: '17.25',
+    name: 'Wireless Noise-Canceling Headphones',
+    description: 'Over-ear headphones with active noise cancellation and 30-hour battery life.',
+    price: '189.25',
     stock_quantity: 12,
-    image_url: 'https://example.com/images/notebook-set.jpg'
+    image_url: 'https://example.com/images/wireless-headphones.jpg'
   },
   {
-    name: 'Desk Lamp',
-    description: 'Adjustable task lamp with warm light.',
-    price: '39.95',
+    name: 'Stainless Steel Water Bottle',
+    description: 'Double-wall insulated bottle that keeps drinks cold for 24 hours.',
+    price: '29.95',
     stock_quantity: 6,
-    image_url: 'https://example.com/images/desk-lamp.jpg'
+    image_url: 'https://example.com/images/stainless-water-bottle.jpg'
   }
 ];
 

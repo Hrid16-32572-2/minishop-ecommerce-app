@@ -1,5 +1,5 @@
 window.minishopApi = (() => {
-  const API_BASE = '/api/v1';
+  const API_BASE = 'http://localhost:3000/api/v1';
 
   async function request(path, options = {}) {
     const response = await fetch(`${API_BASE}${path}`, {
@@ -15,7 +15,9 @@ window.minishopApi = (() => {
 
   return {
     getProducts() {
-      return request('/products');
+      return request('/products', {
+        cache: 'no-store'
+      });
     },
     getProduct(id) {
       return request(`/products/${id}`);
@@ -38,6 +40,25 @@ window.minishopApi = (() => {
         headers: {
           Authorization: `Bearer ${token}`
         }
+      });
+    },
+    addProduct(payload, token) {
+      return request('/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(payload)
+      });
+    },
+    updateProductStock(id, stockQuantity, token) {
+      return request(`/products/${id}/stock`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ stock_quantity: stockQuantity })
       });
     }
   };

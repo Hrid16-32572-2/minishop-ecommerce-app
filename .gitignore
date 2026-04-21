@@ -1,1 +1,4 @@
 node_modules/
+.env
+LOCAL_ONLY_DO_NOT_PUSH/
+.DS_Store
